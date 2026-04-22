@@ -1,0 +1,774 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Adgezit — Антисептик для древесины</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+
+/* ===== COLORS ===== */
+
+:root{
+
+--bg:#f4f7f6;
+--card:#ffffff;
+
+--accent:#2f855a;
+--accent2:#38a169;
+
+--text:#1f2937;
+--muted:#6b7280;
+
+--border:#e5e7eb;
+
+}
+
+/* ===== BASE ===== */
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Inter', sans-serif;
+}
+
+body{
+background:var(--bg);
+color:var(--text);
+line-height:1.6;
+}
+
+.container{
+width:92%;
+max-width:1200px;
+margin:auto;
+}
+
+/* ===== HERO ===== */
+
+.hero{
+
+padding:60px 0;
+
+background:
+linear-gradient(
+120deg,
+#e6f4ec,
+#f4f7f6
+);
+
+border-bottom:1px solid var(--border);
+
+}
+
+.hero h1{
+
+font-size:34px;
+font-weight:800;
+line-height:1.15;
+margin-bottom:18px;
+
+}
+
+.hero span{
+
+color:var(--accent);
+
+}
+
+.hero p{
+
+font-size:16px;
+color:var(--muted);
+margin-bottom:28px;
+
+}
+
+/* ===== ACTIONS ===== */
+
+.hero-actions{
+
+display:flex;
+flex-direction:column;
+gap:12px;
+
+}
+
+.btn{
+
+background:linear-gradient(
+135deg,
+var(--accent),
+var(--accent2)
+);
+
+color:white;
+
+padding:16px;
+
+border-radius:14px;
+
+font-weight:600;
+
+text-align:center;
+
+text-decoration:none;
+
+transition:.2s;
+
+box-shadow:0 6px 14px rgba(0,0,0,.08);
+
+}
+
+.btn:hover{
+
+transform:translateY(-2px);
+
+}
+
+.badge{
+
+border:2px solid var(--accent);
+
+padding:16px;
+
+border-radius:14px;
+
+text-align:center;
+
+font-weight:700;
+
+color:var(--accent);
+
+background:white;
+
+white-space:nowrap;
+
+}
+
+/* ===== GALLERY ===== */
+
+.gallery{
+
+padding:50px 0;
+
+}
+
+.gallery-title{
+
+font-size:26px;
+
+margin-bottom:20px;
+
+font-weight:700;
+
+}
+
+.gallery-grid{
+
+display:grid;
+
+grid-template-columns:1fr;
+
+gap:14px;
+
+}
+
+.gallery-grid img{
+
+width:100%;
+
+height:220px;
+
+object-fit:cover;
+
+border-radius:14px;
+
+cursor:pointer;
+
+transition:.25s;
+
+border:1px solid var(--border);
+
+}
+
+.gallery-grid img:hover{
+
+transform:scale(1.02);
+
+box-shadow:0 10px 24px rgba(0,0,0,.08);
+
+}
+
+/* ===== FEATURES ===== */
+
+.features{
+
+padding:50px 0;
+
+}
+
+.grid{
+
+display:grid;
+
+grid-template-columns:1fr;
+
+gap:16px;
+
+}
+
+.card{
+
+background:var(--card);
+
+padding:20px;
+
+border-radius:16px;
+
+border:1px solid var(--border);
+
+transition:.25s;
+
+}
+
+.card:hover{
+
+transform:translateY(-4px);
+
+box-shadow:0 8px 20px rgba(0,0,0,.05);
+
+}
+
+.card h3{
+
+color:var(--accent);
+
+margin-bottom:8px;
+
+font-size:17px;
+
+}
+
+.card p{
+
+color:var(--muted);
+
+font-size:15px;
+
+}
+
+/* ===== SECTIONS ===== */
+
+.product,
+.use,
+.safety,
+.certificates,
+.contact{
+
+padding:50px 0;
+
+}
+
+.product h2,
+.use h2,
+.safety h2,
+.certificates h2,
+.contact h2{
+
+font-size:26px;
+
+margin-bottom:18px;
+
+}
+
+.product p{
+
+color:var(--muted);
+margin-bottom:12px;
+
+}
+
+/* ===== USE ===== */
+
+.use{
+
+background:white;
+
+border-top:1px solid var(--border);
+border-bottom:1px solid var(--border);
+
+}
+
+.use ul{
+
+padding-left:18px;
+
+}
+
+.use li{
+
+margin-bottom:8px;
+color:var(--muted);
+
+}
+
+/* ===== CERTIFICATES ===== */
+
+.certificates{
+
+background:white;
+
+border-top:1px solid var(--border);
+border-bottom:1px solid var(--border);
+
+}
+
+.cert-text{
+
+color:var(--muted);
+margin-bottom:20px;
+
+}
+
+.cert-grid{
+
+display:grid;
+grid-template-columns:1fr;
+gap:16px;
+
+}
+
+.cert-card{
+
+display:block;
+
+padding:22px;
+
+background:#f9fafb;
+
+border-radius:16px;
+
+border:1px solid var(--border);
+
+text-decoration:none;
+
+font-weight:600;
+
+color:var(--text);
+
+transition:.25s;
+
+}
+
+.cert-card span{
+
+display:block;
+
+margin-top:6px;
+
+font-size:14px;
+
+color:var(--accent);
+
+}
+
+.cert-card:hover{
+
+transform:translateY(-4px);
+
+box-shadow:0 8px 20px rgba(0,0,0,.05);
+
+}
+
+/* ===== CONTACT ===== */
+
+.contact{
+
+background:#f9fafb;
+
+}
+
+.contact p{
+
+color:var(--muted);
+margin-bottom:6px;
+
+}
+
+/* ===== FOOTER ===== */
+
+.footer{
+
+padding:26px 0;
+
+text-align:center;
+
+color:#9ca3af;
+
+font-size:14px;
+
+border-top:1px solid var(--border);
+
+}
+
+/* ===== LIGHTBOX ===== */
+
+.lightbox{
+
+display:none;
+
+position:fixed;
+
+top:0;
+left:0;
+
+width:100%;
+height:100%;
+
+background:rgba(0,0,0,.85);
+
+justify-content:center;
+align-items:center;
+
+z-index:999;
+
+}
+
+.lightbox img{
+
+max-width:90%;
+max-height:90%;
+
+border-radius:14px;
+
+}
+
+/* ===== TABLET ===== */
+
+@media(min-width:640px){
+
+.hero h1{
+font-size:44px;
+}
+
+.hero-actions{
+flex-direction:row;
+align-items:center;
+}
+
+.btn{
+flex:1;
+}
+
+.badge{
+flex:1;
+}
+
+.grid{
+grid-template-columns:repeat(2,1fr);
+}
+
+.gallery-grid{
+grid-template-columns:repeat(2,1fr);
+}
+
+.cert-grid{
+grid-template-columns:repeat(2,1fr);
+}
+
+}
+
+/* ===== DESKTOP ===== */
+
+@media(min-width:1024px){
+
+.hero h1{
+font-size:56px;
+}
+
+.product h2,
+.use h2,
+.safety h2,
+.certificates h2,
+.contact h2{
+font-size:34px;
+}
+
+.grid{
+grid-template-columns:repeat(3,1fr);
+}
+
+.gallery-grid{
+grid-template-columns:repeat(3,1fr);
+}
+
+.gallery-title{
+font-size:34px;
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<!-- HERO -->
+
+<section class="hero">
+
+<div class="container">
+
+<h1>
+Adgezit —<br>
+<span>Иммунитет для древесины</span>
+</h1>
+
+<p>
+Современный органический антисептик-концентрат.
+Создает молекулярный барьер против грибка,
+плесени и разрушения древесины.
+</p>
+
+<div class="hero-actions">
+
+<a href="#contact" class="btn">
+Связаться
+</a>
+
+<div class="badge">
+10 ЛЕТ ГАРАНТИЯ
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- GALLERY -->
+
+<section class="gallery">
+
+<div class="container">
+
+<h2 class="gallery-title">
+Примеры применения
+</h2>
+
+<div class="gallery-grid">
+
+<img src="img1.webp" onclick="openImage(this)">
+<img src="img2.webp" onclick="openImage(this)">
+<img src="img3.webp" onclick="openImage(this)">
+<img src="img4.webp" onclick="openImage(this)">
+<img src="img5.webp" onclick="openImage(this)">
+
+</div>
+
+</div>
+
+</section>
+
+<!-- FEATURES -->
+
+<section class="features">
+
+<div class="container">
+
+<div class="grid">
+
+<div class="card">
+<h3>Водоэмульсионный</h3>
+<p>Глубоко проникает в структуру древесины.</p>
+</div>
+
+<div class="card">
+<h3>Антибактериальный</h3>
+<p>Предотвращает развитие грибка и плесени.</p>
+</div>
+
+<div class="card">
+<h3>Органический</h3>
+<p>Безопасен для людей и окружающей среды.</p>
+</div>
+
+<div class="card">
+<h3>Без запаха</h3>
+<p>Подходит для внутренних помещений.</p>
+</div>
+
+<div class="card">
+<h3>Устойчив к УФ</h3>
+<p>Защищает древесину от солнечного разрушения.</p>
+</div>
+
+<div class="card">
+<h3>Фактурный эффект</h3>
+<p>Сохраняет естественную текстуру дерева.</p>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- PRODUCT -->
+
+<section class="product">
+
+<div class="container">
+
+<h2>Описание продукта</h2>
+
+<p>
+Adgezit — защита древесины на молекулярном уровне.
+Создает среду, где грибок и плесень не выживают.
+</p>
+
+<p>
+Формирование защитного барьера — 14 дней.
+Не требует грунтования.
+</p>
+
+<p>
+Расход — 60 г/м².
+Время высыхания — 48 часов.
+</p>
+
+</div>
+
+</section>
+
+<!-- USE -->
+
+<section class="use">
+
+<div class="container">
+
+<h2>Область применения</h2>
+
+<ul>
+
+<li>Наружные и внутренние работы</li>
+<li>Строительство и ремонт</li>
+<li>Обработка лаг и балок</li>
+<li>Защита мест контакта с металлом</li>
+<li>Пропитка столбов перед установкой</li>
+<li>Садовые и декоративные конструкции</li>
+
+</ul>
+
+</div>
+
+</section>
+
+<!-- SAFETY -->
+
+<section class="safety">
+
+<div class="container">
+
+<h2>Безопасность</h2>
+
+<p>
+Безопасен для людей, животных
+и окружающей среды.
+</p>
+
+<p>
+Хранение: от 0 до +60°C.
+Срок годности — 18 месяцев.
+</p>
+
+</div>
+
+</section>
+
+<!-- CERTIFICATES -->
+
+<section class="certificates">
+
+<div class="container">
+
+<h2>Сертификаты и документы</h2>
+
+<p class="cert-text">
+Официальные документы и сертификаты качества продукта.
+</p>
+
+<div class="cert-grid">
+
+<a href="1.pdf" target="_blank" class="cert-card">
+📄 Сертификат качества  
+<span>Открыть PDF</span>
+</a>
+
+<a href="2.pdf" target="_blank" class="cert-card">
+📄 Документ соответствия  
+<span>Открыть PDF</span>
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- CONTACT -->
+
+<section id="contact" class="contact">
+
+<div class="container">
+
+<h2>Контакты</h2>
+
+<p>ООО «М.Органик»</p>
+
+<p>📧 m.adgezit@mail.ru</p>
+
+<p>📞 +7 (999) 565-99-90</p>
+
+</div>
+
+</section>
+
+<footer class="footer">
+
+© 2026 Adgezit — Защита древесины нового поколения
+
+</footer>
+
+<!-- LIGHTBOX -->
+
+<div class="lightbox" onclick="closeImage()">
+<img id="lightbox-img">
+</div>
+
+<script>
+
+function openImage(img){
+
+document.getElementById("lightbox-img").src = img.src;
+document.querySelector(".lightbox").style.display="flex";
+
+}
+
+function closeImage(){
+
+document.querySelector(".lightbox").style.display="none";
+
+}
+
+</script>
+
+</body>
+</html>
