@@ -255,6 +255,61 @@ margin-bottom:8px;
 color:var(--muted);
 }
 
+/* ===== BUY ===== */
+
+.buy-card{
+background:var(--card);
+border:1px solid var(--border);
+border-radius:16px;
+
+padding:24px;
+
+display:flex;
+flex-direction:column;
+
+gap:18px;
+
+margin-top:20px;
+margin-bottom: 20px;
+
+/* карточка слева */
+margin-left:0;
+margin-right:auto;
+
+width:100%;
+max-width:640px;
+
+transition:.25s;
+}
+
+.buy-card:hover{
+transform:translateY(-4px);
+box-shadow:0 10px 24px rgba(0,0,0,.06);
+}
+
+.buy-text{
+width:100%;
+}
+
+.buy-text h3{
+color:var(--accent);
+margin-bottom:8px;
+font-size:18px;
+}
+
+.buy-text p{
+color:var(--muted);
+margin-bottom:16px;
+font-size:15px;
+}
+
+.buy-btn{
+display:block;
+
+width:100%;
+max-width:280px;
+}
+
 /* ===== VIDEO ===== */
 
 .video{
@@ -432,7 +487,31 @@ padding-left:20px;
 .contact h2{
 font-size:34px;
 }
+
+.buy-card{
+
+flex-direction:row;
+align-items:center;
+justify-content:space-between;
+
+text-align:left;
+
+padding:30px 36px;
+
+max-width:900px;
+
 }
+
+.buy-text{
+max-width:60%;
+}
+
+.buy-btn{
+margin:0;
+}
+
+}
+
 
 </style>
 
@@ -524,6 +603,40 @@ font-size:34px;
 <p>Расход: 60 г/м². Высыхание: 48 часов.</p>
 <p>Время для формирования прочного молекулярного барьера - 14 дней.</p>
 <p>Безопасен для людей, животных и окружающей среды.</p>
+
+</div>
+</section>
+
+<!-- BUY -->
+
+<section class="buy">
+<div class="container">
+
+<h2>Где купить</h2>
+
+<div class="buy-card">
+
+<div class="buy-text">
+
+<h3>М.Органик — Антисептик для древесины</h3>
+
+<p>
+Оформите заказ на Яндекс Маркете с доставкой по всей России.
+Гарантия подлинности продукции.
+</p>
+
+<a 
+href="https://market.yandex.ru/cc/9ELK6K"
+target="_blank"
+class="btn buy-btn">
+
+Купить на Яндекс Маркете
+
+</a>
+
+</div>
+
+</div>
 
 </div>
 </section>
